@@ -16,10 +16,10 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("Could not connect to MongoDB...", err));
 
-app.use("/api/notes", getNotes);
-app.use("/api/notes", postNote);
-app.use("/api/notes", putNotes);
-app.use("/api/notes", deleteNotes);
+app.use("/api/listOfNotes", getNotes);
+app.use("/api/createNotes", postNote);
+app.use("/api/updateNote", putNotes);
+app.use("/api/deleteNote", deleteNotes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
